@@ -5,19 +5,20 @@
   "author": "Nansen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nansen/component-loader/issues"
+    "url": "https://github.com/nansen/componentloader/issues"
   },
-  "homepage": "https://github.com/nansen/component-loader#readme",
+  "homepage": "https://github.com/nansen/componentloader#readme",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nansen/component-loader.git"
+    "url": "https://github.com/nansen/componentloader.git"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "commit": "git-cz",
+    "build": "babel src --out-dir lib",
     "lint": "eslint --ext .js src/",
     "test": "jest",
-    "release": "npm run build && np"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "keywords",
@@ -31,8 +32,13 @@
     }
   },
   "eslintIgnore": [
-    "**/dist/*"
+    "**/lib/*"
   ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -40,6 +46,8 @@
     "@babel/plugin-syntax-dynamic-import": "^7.7.4",
     "@babel/preset-env": "^7.6.3",
     "babel-jest": "^24.9.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.19.1",
@@ -49,6 +57,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
-    "np": "^5.1.1"
+    "semantic-release": "^15.13.31"
   }
 }
