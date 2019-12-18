@@ -1,0 +1,53 @@
+{
+  "name": "@nansen/component-loader",
+  "version": "0.0.0-development",
+  "description": "",
+  "author": "Nansen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nansen/component-loader/issues"
+  },
+  "homepage": "https://github.com/nansen/component-loader#readme",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nansen/component-loader.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint": "eslint --ext .js src/",
+    "test": "jest",
+    "release": "npm run build && np"
+  },
+  "keywords": [
+    "keywords",
+    "describing",
+    "the",
+    "package"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "eslintIgnore": [
+    "**/dist/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "np": "^5.1.1"
+  }
+}

@@ -1,0 +1,8 @@
+*.test.js
+example.html
+specs/
+coverage/
+.babelrc
+jest.config.js
+.npmrc
+src/
