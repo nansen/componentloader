@@ -1,5 +1,5 @@
 {
-  "name": "@nansen/component-loader",
+  "name": "@nansen/componentloader",
   "version": "0.0.0-development",
   "description": "",
   "author": "Nansen",
@@ -8,7 +8,7 @@
     "url": "https://github.com/nansen/componentloader/issues"
   },
   "homepage": "https://github.com/nansen/componentloader#readme",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nansen/componentloader.git"
@@ -17,18 +17,21 @@
     "commit": "git-cz",
     "build": "babel src --out-dir lib",
     "lint": "eslint --ext .js src/",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "semantic-release": "semantic-release"
   },
   "keywords": [
-    "keywords",
-    "describing",
-    "the",
-    "package"
+    "javascript",
+    "component",
+    "loader",
+    "binding",
+    "DOM"
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run build"
+      "pre-commit": "npm test && npm run build",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "eslintIgnore": [
