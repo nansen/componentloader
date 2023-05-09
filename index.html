@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <h1 data-js="_TestClass" data-js-settings='{"text": "This does not say BLA anymore: BLURGH"}'>This should not say BLA: BLA!</h1>
+    <h2 data-js="_Test" data-js-_test='{"background": "green"}'>This should have a green background</h2>
+    <h2 data-js="_Test _TestClass" data-js-_test='{"background": "orange"}' data-js-_testclass='{ "test": "This is now saying BLA instead and should be orange" }'>This should not say BLURG</h2>
+    <p data-js="_TestOnDemand">This should change text on demand!</p>
+    <p data-js="_doesNotExist">This component doesn't exist, look for error message in console</p>
+  </body>
+</html>

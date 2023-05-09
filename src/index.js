@@ -1,6 +1,3 @@
-// this is the base js file
-const sum = (a, b) => {
-  return a + b
-}
+import { ComponentLoader } from "./Utilities/ComponentLoader"
 
-module.exports = sum
+new ComponentLoader(`./Components/`, `./Ondemand/`)
